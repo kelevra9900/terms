@@ -1,6 +1,6 @@
-import Countdown, { CountdownProps } from 'react-countdown';
-import { SeparatorIcon } from '@/components/icons/timer-separator';
-import { twMerge } from 'tailwind-merge';
+import Countdown,{CountdownProps} from 'react-countdown';
+import {SeparatorIcon} from '@/components/icons/timer-separator';
+import {twMerge} from 'tailwind-merge';
 import classNames from 'classnames';
 
 type CountdownTimerProps = {
@@ -16,23 +16,21 @@ const CompletionMessage = () => (
   <span className="text-sm">You are good to go!</span>
 );
 
-// Renderer callback with condition
+interface RendererProps {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  completed: boolean;
+}
+
+interface RendererAdditionalProps {
+  className?: string;
+}
+
 const renderer = (
-  {
-    days,
-    hours,
-    minutes,
-    seconds,
-    completed,
-  }: {
-    days: number;
-    hours: number;
-    minutes: number;
-    seconds: number;
-    completed: boolean;
-  },
-  // @ts-ignore
-  props,
+  {days,hours,minutes,seconds,completed}: RendererProps,
+  props: RendererAdditionalProps,
 ) => {
   if (completed) {
     // Render a completed state
@@ -82,7 +80,7 @@ const CountdownTimer: React.FC<CountdownTimerProps> = ({
       )}
       <Countdown
         date={date}
-        renderer={(props) => renderer(props, { className })}
+        renderer={(props) => renderer(props,{className})}
         onComplete={onComplete}
         onStart={onStart}
       />
