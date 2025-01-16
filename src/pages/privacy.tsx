@@ -145,7 +145,7 @@ export default function PrivacyPage() {
               <ReactMarkdown>
                 {`
 **1. Introducción**
-Esta Política de Privacidad describe cómo recopilamos, utilizamos y compartimos los datos de los usuarios de nuestra aplicación, [Nombre de la Aplicación].
+Esta Política de Privacidad describe cómo recopilamos, utilizamos y compartimos los datos de los usuarios de nuestra aplicación, Trablisa by Era App
                 `}
               </ReactMarkdown>
             </Element>
