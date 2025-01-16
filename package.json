@@ -1,5 +1,5 @@
 {
-  "name": "sphere",
+  "name": "terms",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,18 +9,27 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
-    "next": "15.0.1"
+    "classnames": "^2.5.1",
+    "next": "15.1.4",
+    "react": "^19.0.0",
+    "react-countdown": "^2.3.6",
+    "react-dom": "^19.0.0",
+    "react-markdown": "^9.0.3",
+    "react-scroll": "^1.9.0",
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/forms": "0.5.9",
+    "@tailwindcss/typography": "0.5.15",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/react-scroll": "^1.8.10",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.4",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.1"
+    "typescript": "^5"
   }
 }
